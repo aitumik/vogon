@@ -3,5 +3,6 @@ CHIP And {
     OUT out;
 
     PARTS:
-    And(a=a, b=b,out=w1);
+        Nand(a=a, b=b, out=nandout);
+        Not(in=nandout,out=out);
 }
