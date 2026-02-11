@@ -3,5 +3,8 @@ CHIP Or {
     OUT out;
 
     PARTS:
-    Or(a=a, b=b,out=a | b);
+        Not(in=a,out=nota);
+        Not(in=b,out=notb);
+        And(a=nota,b=notb,out=andout);
+        Not(in=andout,out=out);
 }
